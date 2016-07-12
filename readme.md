@@ -60,7 +60,7 @@ php artisan serve
 
 ## Utilização da API
 
-Após subir o servidor será possível fazer utilizar a api e o sistema pela Url http://localhost:8000, 
+Após subir o servidor será possível fazer utilizar a api e o sistema pela Url **http://localhost:8000**, 
 padrão do Laravel
 
 ##### Listar um cliente pelo seu Cnpj
