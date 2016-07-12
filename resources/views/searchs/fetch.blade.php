@@ -25,7 +25,7 @@
                             @foreach($searchs as $search)
                                 <tr>
                                     <td>{{ $search->cnpj }}</td>
-                                    <td>{{ $search->created_at->format('d/m/Y') }}</td>
+                                    <td>{{ $search->created_at->format('d/m/Y H:i:s') }}</td>
                                     <td>
                                         <a href="{{ url("consultas/{$search->id}") }}"
                                            class="btn btn-primary btn-sm">
