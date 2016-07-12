@@ -33,8 +33,8 @@ php artisan migrate --seed
 Qualquer uma das opções irá criar o banco de dados com o seguinte usuário:
 
 ```
-Usuário: *admin*
-Senha: **admin**
+Usuário: admin
+Senha: admin
 ```
 
 Este usuário será utilizado para login via web e via Api...
