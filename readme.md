@@ -4,19 +4,19 @@ Api e sistema web para consultas
 
 ## Instalação
 
-### 1˚ Passo: Clonar o projeto
+### Clonar o projeto
 
 ```
 git clone https://github.com/daavelar/uplexis
 ```
 
-### 2˚ Passo: Rodar o composer
+### Rodar o composer
 
 ```
 composer install
 ```
 
-### 3˚Passo: Importar o banco de dados
+### Importar o banco de dados
 
 #### Opção 1 - Via terminal
 
@@ -39,7 +39,7 @@ Senha: admin
 
 Este usuário servirá para logar via Web e via Api (Basic Auth)...
 
-### 4˚ Passo:  Subir o servidor da aplicação
+###  Subir o servidor da aplicação
 
 ```
 php artisan serve 
