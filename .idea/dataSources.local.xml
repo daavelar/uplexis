@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - uplexis@localhost" uuid="c8de72e8-ee74-4602-b300-df6eca103e16">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>uplexis.*</schema-pattern>
+      <default-schemas>uplexis.*</default-schemas>
+    </data-source>
+  </component>
+</project>
