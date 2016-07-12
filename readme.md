@@ -16,7 +16,7 @@ git clone https://github.com/daavelar/uplexis
 cd uplexis && composer install
 ```
 
-### Renomear o arquivo .env.example para .env e alterar as configurações de banco
+### Renomear o arquivo _.env.example_ para _.env_ e alterar as configurações de banco
  
 ```
 mv .env.example .env
