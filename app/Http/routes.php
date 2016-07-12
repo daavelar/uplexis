@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => 'auth:web', 'namespace' => 'Web'], function () {
+Route::group(['middleware' => 'auth.web', 'namespace' => 'Web'], function () {
     Route::get('/', 'SearchController@index');
     Route::post('/', 'SearchController@process');
 
@@ -8,11 +8,10 @@ Route::group(['middleware' => 'auth:web', 'namespace' => 'Web'], function () {
     Route::get('consultas/{id}', 'SearchController@show');
     Route::get('consultas/excluir/{id}', 'SearchController@destroy');
     Route::get('auth/logout', '\App\Http\Controllers\Auth\AuthController@getLogout');
-
 });
 
-Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
-    Route::get('api/{cnpj}', 'CustomersController@consulta');
+Route::group(['middleware' => 'auth.api', 'namespace' => 'Api'], function () {
+    Route::get('api/{cnpj}', 'CustomersController@search');
 });
 
 Route::get('documentacao', 'DocumentacaoController@index');

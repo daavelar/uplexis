@@ -33,7 +33,7 @@ php artisan migrate --seed
 Qualquer uma das opções irá criar o banco de dados com o seguinte usuário:
 
 ```
-Usuário: **admin**
+Usuário: *admin*
 Senha: **admin**
 ```
 
@@ -50,4 +50,6 @@ php artisan serve
 Após subir o servidor será possível fazer utilizar a api, os exemplos utilizarão 
 o host http://localhost:8000, padrão do Laravel
 
-### **/GET** http://localhost:8000/api/{cnpj}
+#### /GET http://localhost:8000/api/{cnpj}/
+
+###### Método: **GET**

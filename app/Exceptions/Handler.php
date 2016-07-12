@@ -41,7 +41,10 @@ class Handler extends ExceptionHandler
     {
         switch (get_class($e)) {
             case SintegraApiException::class :
-                return redirect('home')->withErrors($e->getMessage());
+                if (array_key_exists('HTTP_AUTHORIZATION', $_SERVER)) {
+                    return response('Tipo de dados inválido para o campo CNPJ', 500);
+                }
+                return redirect('/')->withErrors($e->getMessage());
                 break;
         }
         return parent::render($request, $e);

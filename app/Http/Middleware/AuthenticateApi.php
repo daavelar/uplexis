@@ -2,12 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use App\User;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
-use Auth;
 
-class Authenticate
+class AuthenticateApi
 {
     /**
      * The Guard implementation.
@@ -34,16 +32,15 @@ class Authenticate
      * @param  \Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $authType)
+    public function handle($request, Closure $next)
     {
-        if ($authType == 'api') {
-            if (! Auth::attempt($request->only('usuario', 'password'))) {
-                return response('Dados de autenticação inválidos', 401);
-            }
-        }
+        $credentials = [
+            'usuario'  => $request->server('PHP_AUTH_USER'),
+            'password' => $request->server('PHP_AUTH_PW'),
+        ];
 
-        if ($this->auth->guest()) {
-            return redirect('auth/login');
+        if (!$this->auth->attempt($credentials)) {
+            return response('Dados de autenticação inválidos', 401);
         }
 
         return $next($request);
