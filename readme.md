@@ -4,7 +4,7 @@ Api e sistema web para consultas
 
 ## Instalação
 
-### Passo 1: Selecionar pasta desejada e clonar o projeto
+### Passo 1: Clonar o projeto
 
 ```
 git clone https://github.com/daavelar/uplexis
