@@ -75,5 +75,10 @@ curl -u "admin:admin" http://localhost:8000/api/31.804.115-0002-43
 
 Em caso de erro serão retornados os seguintes códigos Http, com uma mensagem de erro:
  
-**401** Unauthorized
-**500** Internal Server Error
+``
+401 Unauthorized
+``
+
+``
+500 Internal Server Error
+``
