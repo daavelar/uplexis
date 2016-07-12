@@ -63,14 +63,12 @@ php artisan serve
 Após subir o servidor será possível fazer utilizar a api e o sistema pela Url http://localhost:8000, 
 padrão do Laravel
 
+##### Listar um cliente pelo seu Cnpj
+
 #### /GET http://localhost:8000/api/{cnpj}/
 
-##### Descrição: Lista um cliente pelo seu Cnpj
-
-###### Método: **GET**
-
-O tipo de autenticação da api é o Basic, portanto uma requisição com cURL ficaria assim: 
-
+O tipo de autenticação da api é o Basic, portanto uma requisição com cURL ficaria assim:
+ 
 ```
 curl -u "admin:admin" http://localhost:8000/api/31.804.115-0002-43
 ```
