@@ -10,12 +10,24 @@ Api e sistema web para consultas
 git clone https://github.com/daavelar/uplexis
 ```
 
-### Rodar o composer
+### Entrar na pasta e rodar o composer
 
 ```
-composer install
+cd uplexis && composer install
 ```
 
+### Renomear o arquivo .env.example para .env e alterar as configurações de banco
+ 
+```
+mv .env.example .env
+``` 
+ 
+### Criar o banco de dados 
+ 
+```
+mysql -uroot -p -e "create database uplexis"
+```
+ 
 ### Importar o banco de dados
 
 #### Opção 1 - Via terminal
