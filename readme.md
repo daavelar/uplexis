@@ -4,7 +4,7 @@ Api e sistema web para consultas
 
 ## Instalação
 
-### Passo 1: Clonar o projeto (selecionar pasta desejada)
+### Passo 1: Selecionar pasta desejada e clonar o projeto
 
 ```
 git clone https://github.com/daavelar/uplexis
@@ -12,11 +12,9 @@ git clone https://github.com/daavelar/uplexis
 
 ### Step 2: Rodar o composer
 
-
 ```
 composer install
 ```
-
 
 ### Passo 3: Importar o banco de dados
 
@@ -35,8 +33,8 @@ php artisan migrate --seed
 Qualquer uma das opções irá criar o banco de dados com o seguinte usuário:
 
 ```
-usuario: admin
-senha: admin
+Usuário: **admin**
+Senha: **admin**
 ```
 
 Este usuário será utilizado para login via web e via Api...
@@ -46,3 +44,10 @@ Este usuário será utilizado para login via web e via Api...
 ```
 php artisan serve 
 ```
+
+## Utilização da API
+
+Após subir o servidor será possível fazer utilizar a api, os exemplos utilizarão 
+o host http://localhost:8000, padrão do Laravel
+
+### **/GET** http://localhost:8000/api/{cnpj}
