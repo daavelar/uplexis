@@ -4,21 +4,21 @@ Api e sistema web para consultas
 
 ## Instalação
 
-### Passo 1: Clonar o projeto
+### 1˚ Passo: Clonar o projeto
 
 ```
 git clone https://github.com/daavelar/uplexis
 ```
 
-### Step 2: Rodar o composer
+### 2˚ Passo: Rodar o composer
 
 ```
 composer install
 ```
 
-### Passo 3: Importar o banco de dados
+### 3˚Passo: Importar o banco de dados
 
-#### Opção 1 - Via terminal _(substituir root pelo usuário do banco)_
+#### Opção 1 - Via terminal
 
 ```
 mysql -uroot -p < database/uplexis.sql
@@ -30,16 +30,16 @@ mysql -uroot -p < database/uplexis.sql
 php artisan migrate --seed
 ```
 
-Qualquer uma das opções irá criar o banco de dados com o seguinte usuário:
+Qualquer uma das opções irá criar o banco de dados com as seguintes credenciais:
 
 ```
 Usuário: admin
 Senha: admin
 ```
 
-Este usuário será utilizado para login via web e via Api...
+Este usuário servirá para logar via Web e via Api (Basic Auth)...
 
-### Passo 4:  Subir o servidor da aplicação
+### 4˚ Passo:  Subir o servidor da aplicação
 
 ```
 php artisan serve 
