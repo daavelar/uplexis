@@ -82,3 +82,7 @@ Em caso de erro serão retornados os seguintes códigos Http, com uma mensagem d
 ``
 500 Internal Server Error
 ``
+
+``
+404 Page not found
+``

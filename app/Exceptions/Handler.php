@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use App\Sintegra\SintegraApiException;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -45,6 +46,9 @@ class Handler extends ExceptionHandler
                     return response('Tipo de dados inválido para o campo CNPJ', 500);
                 }
                 return redirect('/')->withErrors($e->getMessage());
+                break;
+            case NotFoundHttpException::class :
+                return response('Rota não encontrada', 404);
                 break;
         }
         return parent::render($request, $e);
