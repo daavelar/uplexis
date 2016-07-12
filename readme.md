@@ -18,7 +18,7 @@ composer install
 
 ### Passo 3: Importar o banco de dados
 
-#### Opção 1 - Via terminal
+#### Opção 1 - Via terminal _(substituir root pelo usuário do banco)_
 
 ```
 mysql -uroot -p < database/uplexis.sql
@@ -53,3 +53,11 @@ o host http://localhost:8000, padrão do Laravel
 #### /GET http://localhost:8000/api/{cnpj}/
 
 ###### Método: **GET**
+
+O tipo de autenticação da api é o Basic, portanto uma requisição com cURL ficaria assim: 
+
+```
+curl -u "admin:admin" http://localhost:8000/api/31.804.115-0002-43
+```
+
+Exemplo de requisição com PHP
